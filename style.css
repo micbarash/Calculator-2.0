@@ -1,0 +1,73 @@
+div {
+
+  padding: 4px 2px;
+}
+button {
+  float: right;
+}
+.calcBody {
+  width: 410px;
+  height: 600px;
+  border: 1px solid black;
+  background-color: #d0cfcf;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 10% 20% repeat(5, 12%) 5%;
+  grid-gap: 3px;
+}
+.display {
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 5px 10px;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  text-align: right;
+}
+.regButton {
+  background-color: rgb(156,156,156);
+  width: 90px;
+  height: 60px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  color: white;
+  font-size: 28px;
+}
+.opButton {
+  background-color: rgb(106,106,106);
+  width: 90px;
+  height: 60px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  color: white;
+  font-size: 28px;
+}
+.eqButton {
+  background-color: #ff7e00;
+  width: 90px;
+  height: 60px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 5px;
+  color: white;
+  font-size: 28px;
+}
+#logo {
+  font-family: Helvetica;
+  font-weight: 800;
+  font-size: 24px;
+  position: relative;
+  top: 9px;
+  left: 3px;
+}
+#operator {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: 700;
+}
+#number {
+  font-size: 36px;
+  font-family: 'Segment7Standard';
+  font-weight: 800;
+}
