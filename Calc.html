@@ -20,32 +20,32 @@
         </div>
       </div>
       <div class="row1">
-        <button class="regButton" id="clear">C</button>
+        <button class="regButton" id="clear" onclick="clearDisplay()">C</button>
         <button class="regButton" id="backspace">&larr;</button>
       </div>
       <div class="row2">
         <button class="opButton" id="divide">/</button>
-        <button class="regButton" id="num9">9</button>
-        <button class="regButton" id="num8">8</button>
-        <button class="regButton" id="num7">7</button>
+        <button class="regButton" id="num9" value="9" onclick="numButton(this)">9</button>
+        <button class="regButton" id="num8" value="8" onclick="numButton(this)">8</button>
+        <button class="regButton" id="num7" value="7" onclick="numButton(this)">7</button>
       </div>
       <div class="row3">
         <button class="opButton" id="multiply">*</button>
-        <button class="regButton" id="num6">6</button>
-        <button class="regButton" id="num5">5</button>
-        <button class="regButton" id="num4">4</button>
+        <button class="regButton" id="num6" value="6" onclick="numButton(this)">6</button>
+        <button class="regButton" id="num5" value="5" onclick="numButton(this)">5</button>
+        <button class="regButton" id="num4" value="4" onclick="numButton(this)">4</button>
       </div>
       <div class="row4">
         <button class="opButton" id="subtract">-</button>
-        <button class="regButton" id="num3">3</button>
-        <button class="regButton" id="num2">2</button>
-        <button class="regButton" id="num1">1</button>
+        <button class="regButton" id="num3" value="3" onclick="numButton(this)">3</button>
+        <button class="regButton" id="num2" value="2" onclick="numButton(this)">2</button>
+        <button class="regButton" id="num1" value="1" onclick="numButton(this)">1</button>
       </div>
       <div class="row5">
         <button class="opButton" id="add">+</button>
         <button class="eqButton" id="equal">=</button>
         <button class="regButton" id="decPoint">.</button>
-        <button class="regButton" id="num0">0</button>
+        <button class="regButton" id="num0" value="0" onclick="numButton(this)">0</button>
       </div>
     </div>
     <script src="main.js"></script>
