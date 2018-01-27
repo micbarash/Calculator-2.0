@@ -9,6 +9,7 @@ button {
   width: 410px;
   height: 600px;
   border: 1px solid black;
+  border-radius: 8px;
   background-color: #d0cfcf;
   margin: auto;
   display: grid;
@@ -16,7 +17,7 @@ button {
   grid-gap: 3px;
 }
 .display {
-  background-color: #eee;
+  background-color: #cbecf5;
   border-radius: 4px;
   margin: 5px 10px;
   display: grid;

@@ -1,33 +1,71 @@
 const displayNum = document.getElementById('number');
 const displayOp = document.getElementById('operator');
 let displayNumValue;
+let displayOpValue;
+let equation = '';
 function clearDisplay() {
-  displayOp.innerHTML = 0;
+  displayOp.innerHTML = '';
   displayNum.innerHTML = 0;
+  displayNumValue = 0;
+  equation = '';
 }
-function num0() {
-  if (displayNum.innerHTML == 0) {
-    displayNum.innerHTML = 0;
-    displayNumValue = 0;
-  } else {
-    displayNum.innerHTML = displayNum.innerHTML + 0;
-    displayNumValue = displayNumValue.toString();
-    displayNumValue = displayNumValue.concat('0');
-    displayNumValue = Number(displayNumValue);
-    console.log(displayNumValue);
-  }
-}
+
 function numButton(button) {
   if (displayNum.innerHTML == 0) {
     let buttonValue = button.value;
     displayNum.innerHTML = buttonValue;
-    displayNumValue = buttonValue;
+    displayNumValue = Number(buttonValue);
+    equation = equation + buttonValue;
+    console.log(equation);
+    //console.log('number value:' + displayNumValue);
   } else {
     let buttonValue = button.value;
     displayNum.innerHTML = displayNum.innerHTML + buttonValue;
     displayNumValue = displayNumValue.toString();
     displayNumValue = displayNumValue.concat(buttonValue);
     displayNumValue = Number(displayNumValue);
-    console.log(displayNumValue);
+    equation = equation + buttonValue;
+    //console.log('number value:' + displayNumValue);
+    console.log(equation);
   }
+}
+
+function opButton(button) {
+  let buttonValue = button.value;
+  displayOpValue = buttonValue;
+  displayOp.innerHTML = displayNumValue + ' ' + displayOpValue;
+  num = Number(displayNumValue);
+  displayNumValue = 0;
+  displayNum.innerHTML = 0;
+  equation = equation + ' ' + buttonValue + ' ';
+  displayOp.innerHTML = equation;
+  console.log(equation);
+  //console.log('operator' + displayOpValue);
+  //console.log('number value:' + displayNumValue);
+}
+
+function decPoint() {
+  if (equation.search(".") !== (-1)) {
+    equation = equation + '.'
+    displayNum.innerHTML = displayNum.innerHTML + '.';
+    displayOp.innerHTML = equation;
+  } else {
+    equation = equation;
+  }
+}
+
+function backspace() {
+  let newEquation = equation.slice(0, -1);
+  equation = newEquation;
+  displayOp.innerHTML = equation;
+  displayNumValue = displayNumValue.toString();
+  let newDisplay = displayNumValue.slice(0, -1);
+  displayNumValue = newDisplay;
+  displayNum.innerHTML = displayNumValue;
+}
+
+function operate() {
+  displayNum.innerHTML = eval(equation);
+  displayOp.innerHTML = '';
+  console.log(eval(equation));
 }
