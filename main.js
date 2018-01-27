@@ -16,8 +16,6 @@ function numButton(button) {
     displayNum.innerHTML = buttonValue;
     displayNumValue = Number(buttonValue);
     equation = equation + buttonValue;
-    console.log(equation);
-    //console.log('number value:' + displayNumValue);
   } else {
     let buttonValue = button.value;
     displayNum.innerHTML = displayNum.innerHTML + buttonValue;
@@ -25,8 +23,6 @@ function numButton(button) {
     displayNumValue = displayNumValue.concat(buttonValue);
     displayNumValue = Number(displayNumValue);
     equation = equation + buttonValue;
-    //console.log('number value:' + displayNumValue);
-    console.log(equation);
   }
 }
 
@@ -39,9 +35,6 @@ function opButton(button) {
   displayNum.innerHTML = 0;
   equation = equation + ' ' + buttonValue + ' ';
   displayOp.innerHTML = equation;
-  console.log(equation);
-  //console.log('operator' + displayOpValue);
-  //console.log('number value:' + displayNumValue);
 }
 
 function decPoint() {

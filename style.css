@@ -8,16 +8,24 @@ button {
 .calcBody {
   width: 410px;
   height: 600px;
-  border: 1px solid black;
+  border-top: 6px solid rgb(98,98,98);
+  border-right: 6px solid rgb(98,98,98);
+  border-left: 5px solid rgb(142,142,142);
+  border-bottom: 5px solid rgb(142,142,142);
   border-radius: 8px;
-  background-color: #d0cfcf;
+  background-color: #afadad;
   margin: auto;
   display: grid;
   grid-template-rows: 10% 20% repeat(5, 12%) 5%;
   grid-gap: 3px;
+  box-shadow: 7px 7px #ddd;
 }
 .display {
   background-color: #cbecf5;
+  border-top: 2px solid rgb(144, 149, 156);
+  border-left: 2px solid rgb(144, 149, 156);
+  border-bottom: 1px solid rgb(144, 149, 156);
+  border-radius: 4px;
   border-radius: 4px;
   margin: 5px 10px;
   display: grid;
@@ -25,7 +33,11 @@ button {
   text-align: right;
 }
 .regButton {
-  background-color: rgb(156,156,156);
+  background-color: rgb(106,106,106);
+  border-top: 3px solid rgb(88,88,88);
+  border-right: 3px solid rgb(88,88,88);
+  border-left: 2px solid rgb(142,142,142);
+  border-bottom: 2px solid rgb(142,142,142);
   width: 90px;
   height: 60px;
   margin-left: 4px;
@@ -35,7 +47,11 @@ button {
   font-size: 28px;
 }
 .opButton {
-  background-color: rgb(106,106,106);
+  background-color: rgb(44,44,44);
+  border-top: 3px solid rgb(22,22,22);
+  border-right: 3px solid rgb(22,22,22);
+  border-left: 2px solid rgb(88,88,88);
+  border-bottom: 2px solid rgb(88,88,88);
   width: 90px;
   height: 60px;
   margin-left: 4px;
@@ -46,6 +62,10 @@ button {
 }
 .eqButton {
   background-color: #ff7e00;
+  border-top: 3px solid rgb(181,88,31);
+  border-right: 3px solid rgb(181,88,31);
+  border-left: 2px solid rgb(247,171,96);
+  border-bottom: 2px solid rgb(247,171,96);
   width: 90px;
   height: 60px;
   margin-left: 4px;
@@ -55,12 +75,12 @@ button {
   font-size: 28px;
 }
 #logo {
-  font-family: Helvetica;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 800;
   font-size: 24px;
   position: relative;
   top: 9px;
-  left: 3px;
+  left: 10px;
 }
 #operator {
   font-size: 20px;
