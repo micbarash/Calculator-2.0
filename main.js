@@ -57,7 +57,27 @@ function backspace() {
   displayNum.innerHTML = displayNumValue;
 }
 
+window.addEventListener("keydown", checkKeyPress, false);
+function checkKeyPress(key) {
+  let code = key.charCode || key.which
+  let char = String.fromCharCode(code);
+  if (char >= 48 || char <= 57 || char == 46 ) {
+    if (displayNum.innerHTML == 0) {
+      displayNum.innerHTML = char;
+      equation = equation + char;
+    } else {
+      console.log(char);
+      displayNum.innerHTML = displayNum.innerHTML + char;
+      displayNumValue = displayNumValue + char;
+      displayNumValue = Number(displayNumValue);
+      equation = equation + char;
+      console.log(equation);
+    }
+  }
+}
+
 function operate() {
+  console.log(equation);
   displayNum.innerHTML = eval(equation);
   displayOp.innerHTML = '';
   console.log(eval(equation));
