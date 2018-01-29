@@ -38,12 +38,13 @@ function opButton(button) {
 }
 
 function decPoint() {
-  if (equation.search(".") !== (-1)) {
-    equation = equation + '.'
+  let checker = displayNum.toString();
+  if (checker.indexOf('.') == -1) {
     displayNum.innerHTML = displayNum.innerHTML + '.';
-    displayOp.innerHTML = equation;
+    equation = equation + '.';
   } else {
     equation = equation;
+    displayNum.innerHTML = displayNum.innerHTML;
   }
 }
 
@@ -61,7 +62,7 @@ window.addEventListener("keydown", checkKeyPress, false);
 function checkKeyPress(key) {
   let code = key.charCode || key.which
   let char = String.fromCharCode(code);
-  if (char >= 48 || char <= 57 || char == 46 ) {
+  if (char >= 48 || char <= 57 ) {
     if (displayNum.innerHTML == 0) {
       displayNum.innerHTML = char;
       equation = equation + char;
@@ -72,7 +73,12 @@ function checkKeyPress(key) {
       displayNumValue = Number(displayNumValue);
       equation = equation + char;
       console.log(equation);
-    }
+    } // ** THE SHIT BELOW DOESN'T WORK **
+  } else if (char == 46) {
+    displayNum.innerHTML = displayNum.innerHTML + '.';
+    displayNumValue = displayNumValue + '.';
+    displayNumValue = Number(displayNumValue);
+    equation = equation + '.';
   }
 }
 
